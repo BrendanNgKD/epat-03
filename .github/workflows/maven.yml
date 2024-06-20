@@ -31,6 +31,8 @@ jobs:
   snyk:
     needs: build
     runs-on: ubuntu-latest
+    env:
+      JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64  # Adjust this path based on your Java version and installation
     steps:
       - uses: actions/checkout@master
       - name: Set execute permissions on mvnw
